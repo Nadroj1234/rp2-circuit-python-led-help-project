@@ -15,7 +15,7 @@ last_state = button.value
 # Define colors / states
 OFF = (0, 0, 0)
 GREEN = (0, 255, 0)
-YELLOW = (0, 0, 255)
+BLUE = (0, 0, 255)
 RED = (255, 0, 0)
 
 colors = [OFF, GREEN, YELLOW, RED, "FLASH_RED"]  # last state is flashing
