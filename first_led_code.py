@@ -1,4 +1,6 @@
-import board
+# BASIC COLOR MOOD CODE
+
+''' import board
 import digitalio
 import neopixel
 import time
@@ -62,4 +64,4 @@ while True:
         time.sleep(0.1)  # debounce
 
     last_state = current_state
-    time.sleep(0.01)
+    time.sleep(0.01) '''

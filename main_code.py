@@ -1,6 +1,18 @@
-# RAINBOW MODE, POLICE MODE, AND THEATER MODE CODE
+import board
+import digitalio
+import neopixel
+import time
 
-'''last_state = button.value
+# define the led strip
+NUM_PIXELS = 24
+pixels = neopixel.NeoPixel(board.GP4, NUM_PIXELS, brightness=0.02, auto_write=False, pixel_order=neopixel.GRB)
+
+#define the button 
+button = digitalio.DigitalInOut(board.GP2)
+button.direction = digitalio.Direction.INPUT
+button.pull = digitalio.Pull.UP
+
+last_state = button.value
 
 # Define colors / states
 OFF = (0, 0, 0)
@@ -118,6 +130,57 @@ def theater_chase_mode():
                 return
 
 
+def pacman_mode():
+    PACMAN_YELLOW = (255, 255, 0)
+    PELLET_COLOR = (255, 255, 255)
+    pacman_pos = 0
+    pellet_pos_1 = 2
+    pellet_pos_2 = 4
+    pellet_pos_3 = 6
+    pellet_pos_4 = 8
+    pellet_pos_5 = 10
+    ghost_pos_1 = 12
+    pellet_pos_6 = 14
+    ghost_pos_2 = 16
+    pellet_pos_7 = 18
+    pellet_pos_8 = 20
+    ghost_pos_3 = 22
+
+
+
+
+    while True:
+        pixels.fill(OFF)
+        pixels[pacman_pos] = PACMAN_YELLOW
+        pixels[pellet_pos_1] = PELLET_COLOR 
+        pixels[pellet_pos_2] = PELLET_COLOR
+        pixels[pellet_pos_3] = PELLET_COLOR
+        pixels[pellet_pos_4] = PELLET_COLOR
+        pixels[pellet_pos_5] = PELLET_COLOR
+        pixels[pellet_pos_6] = PELLET_COLOR
+        pixels[pellet_pos_7] = PELLET_COLOR
+        pixels[pellet_pos_8] = PELLET_COLOR
+        pixels[ghost_pos_1] = (255, 0, 0)
+        pixels[ghost_pos_2] = (0, 0, 255)
+        pixels[ghost_pos_3] = (0, 255, 0)
+        pixels.show()
+        time.sleep(0.05)
+
+
+        if not button.value:
+            while True:
+                time.sleep(0.2)
+                pixels[pacman_pos] = OFF
+                pacman_pos += 1
+                pixels[pacman_pos] = PACMAN_YELLOW
+                pixels.show()
+                if pacman_pos == 23:
+                    pixels.fill(OFF)
+                    pixels.show()
+                    return
+
+
+
 while True:
 
     current_state = button.value
@@ -135,6 +198,11 @@ while True:
             print("Starting Police Lights")
             rapid_press_count = 0
             police_mode()
+
+        elif 6.5 <= press_length < 8.5:   # ~7s window 
+            print("Starting Pacman")
+            rapid_press_count = 0
+            pacman_mode()
 
         elif 5 <= press_length < 10:      # Rainbow catches everything else in 5-10s
             print("Starting rainbow")
@@ -191,4 +259,4 @@ while True:
                     pixels.show()
 
     last_state = current_state
-    time.sleep(0.01) '''
+    time.sleep(0.01)
