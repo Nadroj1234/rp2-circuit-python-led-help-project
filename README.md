@@ -1,12 +1,24 @@
 # How To Install Circuit Python On RP2040
 
-First- Download the circuit python bundle on this website https://circuitpython.org/libraries Download version 10.x
+First - Download the circuit python bundle on this website https://circuitpython.org/libraries Download version 10.x
 
-Next- download the two library files (in the libraries folder) and put it in the lib folder on the rp2040
+Next - download the two library files (in the libraries folder) and put it in the lib folder on the rp2040
 then put the code in the code.py file and save the file
 
 # GP pins
 
-LED Strip- The led Strips GP pin is GP4
+LED Strip - The led Strips GP pin is GP4
 
 BUTTON - The button GP pin is GP2
+
+# Wire Lengths
+
+Button Ground - 75cm give or take
+
+Button GP Wire - 75cm give or take
+
+LED Ground - 45cm give or take
+
+LED GP Wire - 75cm give or take
+
+LED 5v Wire - 75cm give or take
