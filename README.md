@@ -4,7 +4,7 @@ First - Download the circuit python bundle on this website https://circuitpython
 Then copy and paste the uf2 file onto the RP2040
 It will reconnect and then do the followeing steps
 
-Next - download the two library files (in the libraries folder) and put it in the lib folder on the rp2040
+Next - download the two library files (in the libraries folder in this repository) and put it in the lib folder on the rp2040
 then put the code in the code.py file and save the file
 
 # GP pins
