@@ -16,6 +16,8 @@ BUTTON - The button GP pin is GP2
 
 # Wire Lengths
 
+You need to have a double Compact Splicing Wire Connecter to have all of the grounds connect into one wire.
+
 The LED Strip should be 24 LEDs long.
 
 Button Ground - 75cm give or take
