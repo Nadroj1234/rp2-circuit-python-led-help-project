@@ -1,7 +1,7 @@
 # How To Install Circuit Python On RP2040
 
 First - Download the circuit python bundle on this website https://circuitpython.org/libraries Download version 10.x
-Then put the folder you just downloaded onto the RP2040
+Then extract the folder you just downloaded, then copy and past the unzipped folder onto the RP2040
 It will reconnect and then do the followeing steps
 
 Next - download the two library files (in the libraries folder) and put it in the lib folder on the rp2040
