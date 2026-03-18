@@ -6,7 +6,7 @@ It will reconnect and then do the followeing steps
 
 Next - download the two library files (in the libraries folder in this repository) and put it in the lib folder on the rp2040
 
-Then- export this repository, open it with vscode, then put the code in the code.py file and save the file
+Then- copy and paste the main_code.py into the code.py file on the RP2040
 
 # GP pins
 
