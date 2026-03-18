@@ -16,6 +16,8 @@ BUTTON - The button GP pin is GP2
 
 # Wire Lengths
 
+The LED Strip should be 24 LEDs long.
+
 Button Ground - 75cm give or take
 
 Button GP Wire - 75cm give or take
